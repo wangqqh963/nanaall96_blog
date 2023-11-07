@@ -1,0 +1,196 @@
+body {
+  border-radius: 10px;  
+  background-color: rgba(144, 103, 78, 0.782)
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+  }
+  
+  p {
+    display: inline-block;
+  }
+  
+  li {
+    list-style: none;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: rgba(225, 199, 199, 0.89);
+  }
+  
+/*顶导航栏*/
+
+.topnav {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 42px;
+  border: 1px solid rgba(250, 240, 240, 0);
+  border-radius: 15px 15px 0 0;
+  background-color: rgba(52, 51, 51, 0.496);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  display: inline-block;
+  width: 80px;
+  height: auto;
+  margin-top: 3px;
+  margin-left: 12px;
+  border: 1px solid rgba(250, 240, 240, 0);
+  font-size: 25px;
+}
+
+
+
+
+
+
+
+  /*圈圈头*/
+
+  .leftsss {
+    display: block;
+    width: 150px;
+    height: 40px;
+    margin: 3px;
+    position: relative;
+    text-indent: 0em;
+    text-align: center;
+  }
+
+  .head {
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border: 1px solid rgba(152, 152, 152, 0.575);
+    border-radius: 50%;
+    margin: 5px 0 0 0;
+    padding: 0;
+    background-color: #FFB6C1;
+    background-image: url(../picture/1.png);
+    background-size: 225%;
+    background-position: 56% 3%;
+    font-size: 80px;
+    transition: all 0.5s ease 0.1s;
+  } 
+  
+  .head:hover{
+    transform: rotate(360deg);
+  }
+  
+  
+
+/*左导航栏*/
+
+  .left {
+    display: block;
+    position: fixed;
+    width: 160px;
+    height: auto;
+    padding: 0;
+    top: 44px;
+    border: 1px solid rgba(226, 226, 226, 0);
+    background-color: rgba(78, 39, 39, 0.405);
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  .lnav {
+    display: block;
+    float: left;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background-color: rgba(188, 199, 209, 0);
+    border-radius: 3px;
+    
+  }
+  .lnav ul li {
+    display: block;
+    width: 150px;
+    height: 30px;
+    margin: 3px;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: rgba(246, 246, 246, 0);
+    text-align: left;
+    text-indent: 1em;
+    line-height: 30px;
+    transition: all 0.5s ease 0.1s;
+  }
+
+  .lnav ul li:hover{
+    background-color: rgba(255, 255, 255, 0.548);
+
+  }
+
+  .firstli {
+    display: block;
+    width: 95%;
+    border-top: 0.5px solid #fefefe77;
+  }
+  
+  .lnav .nana {
+    display: block;
+    width: 120px;
+    height: 40px;
+    padding: 8px 1px;
+    margin-bottom: 10px;
+    margin-top: 110px;
+    margin-left: 20px;
+    border-radius: 5px;
+    background-color: rgba(75, 55, 55, 0.564);
+    color: rgba(0, 0, 0, 0.607);
+    text-align: center;
+    line-height: 40px;
+    text-indent: 0em;
+  }
+  
+  .n_lnav {
+    position: fixed;
+    height: auto;
+    bottom: 0;
+  }
+
+  .left .motto {
+    display: block;
+    position: absolute;  
+    width: 80px;
+    height: 60px;
+    padding: 8px;
+    margin-top: 40px;
+    border-radius: 10px;
+    background-color: rgba(85, 50, 50, 0.573);
+    color: rgb(47, 47, 47);
+    text-indent: 0;
+    bottom: 0;
+  }
+  
+
+
+  /*nana_main*/
+  .nana_main{
+    display: block;
+    position: absolute;
+    width: 800px;
+    height: 900px;
+    max-width: 1200px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    background-color: rgba(82, 82, 82, 0.207);
+  }
+
+  .nana_main .nanawrite {
+    display: block;
+    position: absolute;
+  }

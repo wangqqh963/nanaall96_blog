@@ -1,0 +1,128 @@
+ <!DOCTYPE html>
+<html lang='zh-CN'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='referrer' content='no-referrer'>
+    <link rel='stylesheet' href='style.css'>
+    
+  <style>
+    * {
+      list-style: none;
+    }
+
+    table {
+      border-collapse: collapse;
+      padding: 0;
+    }
+      
+    
+    a {
+      display: block;
+      text-decoration: none;
+      background-color: pink;
+      color: white;
+    }
+    
+     
+
+  </style>
+
+    
+    <title>
+        世界第一可爱的公主殿下！
+    </title>
+    
+  </head>
+  
+  <body align='center'>
+    <script>
+        let s = prompt('输入音乐直链:')
+        s !=='' ? document.write(`<audio src=${s} autoplay controls></audio>`) : alert(`叫你输链接!笨蛋!`)
+    </script>
+
+     <table border='1' align='center' class='pink'>
+      <caption>html and music</caption>
+      <thead>
+        <tr>
+          <td colspan='2'>audio src='音乐直链' controls> </audio
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>controls
+          <td>用来显示控件
+        </tr>
+      </tbody>
+      
+      
+      
+      
+    </table>
+    <p><br><br></p>
+    <table border='1' cellspacing='0' cellpadding='0' align='center' >
+      <caption>这是table的一些属性</caption>
+      <thead>
+        <tr>
+          <td>属性名
+          <td>属性值          
+          <td>说明
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>rowspan
+          <td rowspan='2'>合并单元格个数?    
+          <td>垂直合并
+        </tr>
+        <tr>
+          <td>colspan
+          <td>水平合并
+        </tr>
+    </table>
+    
+    
+    <ol>
+      <li>input的属性：</li>
+      <ul>
+        <li>text</li>
+        <li>password</li>
+        <li>radio</li>
+        <li>checkbox</li>
+        <li>file</li>
+        <li>submit</li>
+        <li>reset</li>
+        <li>putton</li>
+      </ul>
+    </ol>
+
+  </body>
+
+  <script>
+    let n = prompt('baka想说什么?:')
+    
+    switch (n) {
+        case 'baka':
+            alert(`哼哼~`)
+            break
+        default:
+            alert(`konobakabaka!`)
+            break
+    }
+    
+    if (!+n) {
+        document.write(`baka:${n}`)
+    } else if (n < 100) {
+        document.write(`还算有点脑子啊你`)
+    } else {
+        document.write(`你已经无药可就了`)
+    }
+    
+    while (n > 0) {
+        document.write(`<p>${n}</p>`)
+        n -= 1
+    }
+    
+  </script>
+  
+  </html>

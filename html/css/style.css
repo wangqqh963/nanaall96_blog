@@ -1,0 +1,38 @@
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style: none;
+      font-weight: 200;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      background-color: pink;
+      color: white;
+    }
+    a:hover {
+      color: #ffdfff;
+      text-decoration: underline;
+    }
+    body {
+      background-color: ghostwhite;
+    }
+    h1 {
+      color: pink;
+    }
+    .pink {
+      color: pink;
+    }
+    .home {
+      width: 10px;
+      height: 10px;
+      background-color: lavenderblush;
+    }
+    
+     
+     
+
+  </style>>
