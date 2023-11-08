@@ -23,6 +23,16 @@ body {
     color: rgba(225, 199, 199, 0.89);
   }
   
+  h1 {
+    color: #caa9ae;
+    text-align: center;
+  }
+
+  p {
+    color: antiquewhite;
+    text-indent: 2em;
+  }
+  
 /*顶导航栏*/
 
 .topnav {
@@ -99,7 +109,8 @@ body {
     top: 44px;
     border: 1px solid rgba(226, 226, 226, 0);
     background-color: rgba(78, 39, 39, 0.405);
-    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.062), 0 6px 20px 0 rgba(0, 0, 0, 0.062);
+    border-radius: 0 0 3px 3px;
     text-align: center;
   }
 
@@ -184,13 +195,61 @@ body {
     height: 900px;
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 50px;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: -1;
-    background-color: rgba(82, 82, 82, 0.207);
+    background-color: rgba(199, 179, 179, 0.259);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.062), 0 6px 20px 0 rgba(0, 0, 0, 0.062);
   }
 
-  .nana_main .nanawrite {
+
+
+  /* l0l */
+
+  .nana_main ul li {
     display: block;
-    position: absolute;
+    float: left;
+    width: auto;
+    height: auto;
+    margin: 30px 0 0 120px;
+    border: rgba(247, 247, 247, 0.235);
+    border-radius: 3px;
+    background-color: rgba(220, 214, 214, 0.376);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.062), 0 6px 20px 0 rgba(0, 0, 0, 0.062);
+    font-size: 16px;
+    transition: all 0.5s ease 0.1s;
+  }
+  .nana_main ul li:hover {
+    transform: scale(1.1);
+    background-color: rgba(245, 245, 220, 0.445);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 3;
+  }
+  
+  .nana_main ul li div {
+    display: block;
+    float: left;
+    width: 120px;
+    height: 120px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #ffb6c160;
+    background-image: url(../picture/1.png);
+    background-size: 400%;
+    background-position: 0% 0%;
+    transition: all 0.5s ease 0.1s;
+    text-indent: 2em;
+  }
+
+  .nana_main ul li p {
+    display: block;
+    float: left;
+    width: 360px;
+    height: 110px;
+    padding: 10px;
+    border-left: solid 2px white;
+    color: aliceblue;
+    text-align: center;
+    text-indent: 2em;
   }

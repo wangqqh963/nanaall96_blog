@@ -1,4 +1,4 @@
-let blog=`"blog.html"`;
+let blog=`"../blog.html"`;
 
 document.write(`
 <div class="topnav">
