@@ -1,6 +1,14 @@
 body {
+  display: block;
+  min-width: 648px;
   border-radius: 10px;  
-  background-color: rgba(144, 103, 78, 0.782)
+  background-color: rgba(6, 0, 0, 0.856);
+  caret-color: rgba(0,0,0,0);
+  user-select: none;
+  background-image: url(https://t.mwm.moe/ycy);
+  background-size: 250%;
+  background-repeat: no-repeat;
+  background-attachment:fixed
   }
   
   * {
@@ -11,6 +19,7 @@ body {
   
   p {
     display: inline-block;
+    user-select: text;
   }
   
   li {
@@ -32,32 +41,94 @@ body {
     color: antiquewhite;
     text-indent: 2em;
   }
+
+  .menu-icons {
+    color: rgba(237, 237, 238, 0.645);
+  }
   
-/*顶导航栏*/
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.left::-webkit-scrollbar {
+  width: 2px;
+  height: 0px;
+}
+
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgb(236, 95, 95);
+  border-radius: 3px;
+}
+
+.left::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgb(98, 3, 3);
+  border-radius: 3px;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: rgba(89, 88, 88, 0.4);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.25);
+}
+
+.left::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: rgb(255, 205, 205);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.25);
+}
+
+/* 非激活窗口 */
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(89, 88, 88, 0.4);
+}
+
+
+
+  /*顶导航栏*/
 
 .topnav {
   position: fixed;
   display: block;
   width: 100%;
-  height: 42px;
+  min-width: 648px;
+  height: 45px;
+  margin-left: 0px;
   border: 1px solid rgba(250, 240, 240, 0);
-  border-radius: 15px 15px 0 0;
-  background-color: rgba(52, 51, 51, 0.496);
+  background-color: rgba(70, 69, 69, 0.496);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  transition: all 0.5s ease 0.1s;
 }
 
 .navbar-brand {
-  display: inline-block;
-  width: 80px;
+  position: absolute;
+  display: block;
+  float: left;
+  width: auto;
   height: auto;
   margin-top: 3px;
   margin-left: 12px;
+  left: 50%;
+  transform: translate(-50%, 0);
   border: 1px solid rgba(250, 240, 240, 0);
   font-size: 25px;
 }
 
-
+.sidebar {
+  display: block;
+  float: left;
+  width: 45px;
+  height: auto;
+  padding: 15px 0px 5px 20px;
+  background-color: #caa9ae00;
+  color: rgb(102, 70, 60);
+  cursor: pointer;
+}
 
 
 
@@ -103,15 +174,34 @@ body {
   .left {
     display: block;
     position: fixed;
-    width: 160px;
-    height: auto;
+    width: 0;
+    height: 100%;
     padding: 0;
-    top: 44px;
+    top: 0px;
     border: 1px solid rgba(226, 226, 226, 0);
-    background-color: rgba(78, 39, 39, 0.405);
+    background-color: rgba(70, 69, 69, 0.496);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.062), 0 6px 20px 0 rgba(0, 0, 0, 0.062);
-    border-radius: 0 0 3px 3px;
+    border-right: rgba(159, 63, 63, 0.357) solid 0.5px;
+    border-radius: 3px 0 3px 3px;
     text-align: center;
+    overflow-y: auto;
+    transition: all 0.5s ease 0.1s;
+    z-index: -1;
+  }
+
+
+  .decorate {
+    display: block;
+    width: 150px;
+    height: 34px;
+    padding: 5px 0px 5px 0px;
+    margin-top: 25px;
+    background-color: #caa9ae00;
+    color: rgb(102, 70, 60);
+    font-size: 20px;
+    cursor: auto;
   }
 
   .lnav {
@@ -191,16 +281,21 @@ body {
   .nana_main{
     display: block;
     position: absolute;
-    width: 800px;
-    height: 900px;
-    max-width: 1200px;
+    width: 80%;
+    height: 160%;
+    min-width: 648px;
+    min-height: 100%;
+    max-width: 900px;
     margin: 0 auto;
+    margin-left: 0;
     padding-top: 50px;
     left: 50%;
     transform: translate(-50%, 0);
-    z-index: -1;
+    z-index: -20;
     background-color: rgba(199, 179, 179, 0.259);
+    backdrop-filter: blur(10px);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.062), 0 6px 20px 0 rgba(0, 0, 0, 0.062);
+    transition: all 0.5s ease 0.1s;
   }
 
 
@@ -212,9 +307,11 @@ body {
     float: left;
     width: auto;
     height: auto;
-    margin: 30px 0 0 120px;
-    border: rgba(247, 247, 247, 0.235);
+    min-width: 200px;
+    min-height: 90px;
     border-radius: 3px;
+    margin: 20px 100px;
+    margin-left: 20%;
     background-color: rgba(220, 214, 214, 0.376);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.062), 0 6px 20px 0 rgba(0, 0, 0, 0.062);
     font-size: 16px;
@@ -224,15 +321,14 @@ body {
     transform: scale(1.1);
     background-color: rgba(245, 245, 220, 0.445);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    z-index: 3;
   }
   
   .nana_main ul li div {
     display: block;
     float: left;
-    width: 120px;
-    height: 120px;
-    padding: 5px;
+    width: 100%;
+    height: 30px;
+    border-left: solid 2px white;
     border-radius: 3px;
     background-color: #ffb6c160;
     background-image: url(../picture/1.png);
@@ -245,10 +341,9 @@ body {
   .nana_main ul li p {
     display: block;
     float: left;
-    width: 360px;
-    height: 110px;
+    width: auto;
+    height: auto;
     padding: 10px;
-    border-left: solid 2px white;
     color: aliceblue;
     text-align: center;
     text-indent: 2em;
